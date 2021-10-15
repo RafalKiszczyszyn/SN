@@ -17,12 +17,16 @@ Aby uruchomić wybrane badanie, otwórz `Lab1/x.py` i odkomentuj odpowiednią li
     # adaline_min_cost_bipolar(X, y, eta=0.01, w_range=0.5)
     # adaline_min_cost_unipolar(X_, y_, eta=0.01, w_range=0.01)
 ```
+Następnie uruchom w cmd:
+```
+python Lab1/x.py
+```
 
 Aby przetestować wybrany model dla różnych wektorów wejściowych należy uruchomić w cmd:
 ```
-python x.py perceptron -1 1
+python Lab1/x.py perceptron -1 1
 ```
 lub 
 ```
-python x.py adaline -1 1
+python Lab1/x.py adaline -1 1
 ```
