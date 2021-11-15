@@ -30,3 +30,16 @@ lub
 ```
 python Lab1/x.py adaline -1 1
 ```
+
+### Labolatorium 2.
+Zainstaluj środowisko wirtualne:
+```shell script
+python -m venv .env
+".env/Scripts/Activate"
+python -m pip install -r requirements.txt
+```
+Uruchom wszystkie badania:
+```shell script
+python Lab2/reseach.py
+```
+Aby przerwać naciśnij Ctrl+C.

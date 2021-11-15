@@ -1,0 +1,21 @@
+Research 1 2021-11-12 14:18:28.478295
+Hidden layer size=1 Activation=<class 'Lab2.mltoolkit.Tanh'> Avg. accuracy=0.31043333333333334 Avg. epoch=98.8
+Hidden layer size=1 Activation=<class 'Lab2.mltoolkit.Relu'> Avg. accuracy=0.3178666666666667 Avg. epoch=98.9
+Hidden layer size=5 Activation=<class 'Lab2.mltoolkit.Relu'> Avg. accuracy=0.8766999999999999 Avg. epoch=98.4
+Hidden layer size=5 Activation=<class 'Lab2.mltoolkit.Tanh'> Avg. accuracy=0.8656833333333335 Avg. epoch=98.4
+Hidden layer size=20 Activation=<class 'Lab2.mltoolkit.Relu'> Avg. accuracy=0.9309 Avg. epoch=98.9
+Hidden layer size=20 Activation=<class 'Lab2.mltoolkit.Tanh'> Avg. accuracy=0.9325333333333333 Avg. epoch=98.6
+Hidden layer size=50 Activation=<class 'Lab2.mltoolkit.Relu'> Avg. accuracy=0.9362166666666667 Avg. epoch=81.8
+Hidden layer size=50 Activation=<class 'Lab2.mltoolkit.Tanh'> Avg. accuracy=0.9364999999999999 Avg. epoch=77.3
+Hidden layer size=100 Activation=<class 'Lab2.mltoolkit.Relu'> Avg. accuracy=0.9364833333333336 Avg. epoch=71.2
+Hidden layer size=100 Activation=<class 'Lab2.mltoolkit.Tanh'> Avg. accuracy=0.9362333333333334 Avg. epoch=79.6
+Hidden layer size=200 Activation=<class 'Lab2.mltoolkit.Relu'> Avg. accuracy=0.9375500000000001 Avg. epoch=67.4
+Hidden layer size=200 Activation=<class 'Lab2.mltoolkit.Tanh'> Avg. accuracy=0.9357333333333335 Avg. epoch=90.8
+Hidden layer size=500 Activation=<class 'Lab2.mltoolkit.Relu'> Avg. accuracy=0.9378333333333332 Avg. epoch=61.8
+Hidden layer size=1000 Activation=<class 'Lab2.mltoolkit.Relu'> Avg. accuracy=0.9388166666666666 Avg. epoch=58.5
+Hidden layer size=500 Activation=<class 'Lab2.mltoolkit.Tanh'> Avg. accuracy=0.9282666666666668 Avg. epoch=99.0
+Hidden layer size=2000 Activation=<class 'Lab2.mltoolkit.Relu'> Avg. accuracy=0.9388166666666666 Avg. epoch=54.3
+Research 1 - ReLu
+Accuracy=[0.3178666666666667, 0.8766999999999999, 0.9309, 0.9362166666666667, 0.9364833333333336, 0.9375500000000001, 0.9378333333333332, 0.9388166666666666, 0.9388166666666666]
+Epoch=[98.9, 98.4, 98.9, 81.8, 71.2, 67.4, 61.8, 58.5, 54.3]
+Hidden layer size=1000 Activation=<class 'Lab2.mltoolkit.Tanh'> Avg. accuracy=0.9189166666666667 Avg. epoch=98.9
