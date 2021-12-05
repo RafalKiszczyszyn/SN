@@ -9,8 +9,8 @@ sys.path.append(path)
 import numpy as np
 from dataclasses import dataclass
 from mnist import MNIST
-from Lab2.mlp2 import Layer, MultilayerPerceptron
-from Lab2.mltoolkit import Softmax, Relu, Tanh, IActivationFunction, DataSet, accuracy, Stats
+from Lab2.mlp import Layer, MultilayerPerceptron
+from Lab2.models import Softmax, Relu, Tanh, IActivationFunction, DataSet, accuracy, Stats
 from Lab2.workers import WorkerPool, create_job
 
 
@@ -179,7 +179,7 @@ class ParalleledResearch:
     def _fit_and_verify(self, layers, mean, sigma, batch_size, epochs, eta, max_train_accuracy, max_cost_dev_rise):
         mlp = MultilayerPerceptron(layers=layers, mean=mean, sigma=sigma)
         best, stats, reason = mlp.fit2(
-            train_data_set=self.train_set, dev_data_set=self.dev_set, epochs=epochs, eta=eta, batch_size=batch_size,
+            trainDataSet=self.train_set, devDataSet=self.dev_set, epochs=epochs, eta=eta, batch_size=batch_size,
             max_train_accuracy=max_train_accuracy, max_cost_dev_rise=max_cost_dev_rise)
 
         Y_test_hat = mlp.predict(X=self.test_set.X)
@@ -224,7 +224,7 @@ def prepare_data_set():
     return DataSet(X=X, Y=Y, labels=labels)
 
 
-def split(data_set: DataSet, train, dev, test):
+def split(data_set: DataSet, train: float, dev: float, test: float):
     assert train + dev + test <= 1
 
     N = len(data_set.labels)

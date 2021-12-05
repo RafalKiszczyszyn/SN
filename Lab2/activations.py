@@ -1,22 +1,6 @@
 from abc import ABC, abstractmethod
-from typing import List
 
 import numpy as np
-
-from dataclasses import dataclass, field
-
-
-@dataclass
-class DataSet:
-    X: np.ndarray
-    Y: np.ndarray
-    labels: np.ndarray
-
-
-@dataclass
-class Stats:
-    cost_train_history: List[float] = field(default_factory=lambda: [])
-    cost_dev_history: List[float] = field(default_factory=lambda: [])
 
 
 class IActivationFunction(ABC):
@@ -53,7 +37,20 @@ class Tanh(IActivationFunction):
         return dA * (1 - np.power(self.calc(Z), 2))
 
     def __repr__(self):
-        return 'TanH'
+        return Tanh.__name__
+
+
+class Sigmoid(IActivationFunction):
+
+    def calc(self, Z):
+        return 1./(1. + np.power(np.e, (-Z)))
+
+    def derivative(self, dA, Z):
+        A = self.calc(Z)
+        return dA * (A * (1 - A))
+
+    def __repr__(self):
+        return Sigmoid.__name__
 
 
 class Softmax(IActivationFunction):
@@ -65,11 +62,4 @@ class Softmax(IActivationFunction):
         return - (dA - self.calc(Z))
 
     def __repr__(self):
-        return 'Softmax'
-
-
-def accuracy(labels: np.ndarray, Y_hat: np.ndarray):
-    predicted_labels = Y_hat.argmax(axis=1)
-    matches = predicted_labels == labels
-    correct = matches.sum()
-    return correct / len(labels)
+        return Softmax.__name__
