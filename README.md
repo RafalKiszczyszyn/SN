@@ -43,3 +43,16 @@ Uruchom wszystkie badania:
 python Lab2/reseach.py
 ```
 Aby przerwać naciśnij Ctrl+C.
+
+### Labolatorium 3.
+Zainstaluj środowisko wirtualne:
+```shell script
+python -m venv .env
+".env/Scripts/Activate"
+python -m pip install -r requirements.txt
+```
+Uruchom wszystkie badania:
+```shell script
+python Lab3/main.py
+```
+Aby przerwać naciśnij Ctrl+C.
